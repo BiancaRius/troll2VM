@@ -1,0 +1,1 @@
+singularity exec troll.sif /usr/local/TROLL.out -i./example/global_inputs.txt -s./example/species.txt -m./example/daily_climate.txt -d./example/halfhourly_climate.txt -p./example/soil.txt -o./test/TROLLv4_test

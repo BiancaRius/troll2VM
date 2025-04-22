@@ -1,0 +1,20 @@
+BootStrap: library
+From: ubuntu:22.04
+
+%labels
+  Author Sylvain Schmitt
+
+%help
+  This will run TROLL
+  
+%files
+  mainTROLL4.0.cpp /mainTROLL4.0.cpp
+  
+%post
+    apt-get -y update
+    apt-get -y install g++ libgsl-dev
+    g++ -O3 -Wall -o /usr/local/TROLL.out mainTROLL4.0.cpp -lgsl -lgslcblas -lm 
+
+%environment
+    export TROLL=/usr/local/TROLL.out
+    
